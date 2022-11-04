@@ -1,0 +1,42 @@
+{
+   
+    "version": "2.0.0",
+    "command": "C++",
+    "args": [
+        "-g", "-std=c++11", "${file}", "-o", "${fileBasenameNoExtension}.o",// 设置动态链接库
+        "-I", "/usr/local/include",
+        "-I", "/usr/local/include/opencv",
+        "-I", "/usr/local/include/opencv2",
+        "-L", "/usr/local/lib",
+        "-l", "opencv_core",
+        "-l", "opencv_imgproc",
+        "-l", "opencv_imgcodecs",
+        "-l", "opencv_video",
+        "-l", "opencv_ml",
+        "-l", "opencv_highgui",
+        "-l", "opencv_objdetect",
+        "-l", "opencv_flann",
+        "-l", "opencv_imgcodecs",
+        "-l", "opencv_photo",
+        "-l", "opencv_videoio"
+    ],
+    "problemMatcher":{
+        "owner": "cpp",
+        "fileLocation":[
+            "relative",
+            "${workspaceFolder}"
+        ],
+        "pattern":[
+            {
+                "regexp": "^([^\\\\s].*)\\\\((\\\\d+,\\\\d+)\\\\):\\\\s*(.*)$",
+                "file": 1,
+                "location": 2,
+                "message": 3
+            }
+        ]
+    },
+    "group": {
+        "kind": "build",
+        "isDefault": true
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "ros.distro": "noetic",
+    "C_Cpp.errorSquiggles": "Disabled",
+    "files.associations": {
+        "deque": "cpp",
+        "string": "cpp",
+        "vector": "cpp",
+        "cmath": "cpp"
+    }
+}

@@ -1,0 +1,11 @@
+aux_source_directory(src MY_LIB_M2)
+add_library(module2 SHARED ${MY_LIB_M2})
+target_include_directories(module2 PUBLIC include/robotlab)
+target_include_directories(module2 PUBLIC include)
+target_include_directories(module2 PUBLIC include/robotlab/opcua_cs)
+target_include_directories(module2 PUBLIC include/robotlab/opcua_cs/ua_type)
+
+find_package(OpenCV REQUIRED)
+target_include_directories(module2 PUBLIC ${OpenCV_INCLUDE_DIRS})
+target_link_libraries(module2 ${OpenCV_LIBS})
+target_link_libraries(module2  pthread)
